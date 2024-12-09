@@ -22,6 +22,17 @@ html {
   scroll-padding-top: 9rem;
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar{
+  width: 0.8rem;
+  background-color: white;
+}
+html::-webkit-scrollbar-thumb{
+  border-radius: 3rem;
+  background-color: black;
+
+
+}
+
 body {
   background-color: var(--main-calor);
   height: 200vh;
@@ -42,6 +53,23 @@ section {
   color: aliceblue;
   background-color: #000000;
   cursor: pointer;
+}
+
+.btn:hover{
+  opacity: 0.9;
+}
+.heading{
+  color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 0.1rem solid white ;
+
+}
+.heading span{
+  text-transform: uppercase;
+  color: black;
+  
+
 }
 /*!Header Başladık*/
 .header .logo img {
