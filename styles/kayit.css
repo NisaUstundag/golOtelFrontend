@@ -1,0 +1,79 @@
+/* Genel ayarlar */
+body {
+    background-color: #7d5c2e;
+    
+      
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+        font-family: 'Poppins', sans-serif; 
+    }
+  /* Form kapsayıcısı */
+  .form-container {
+    background-color: white;
+    background-size: cover;          
+    background-repeat: no-repeat;     /* Resmin tekrarlamasını engeller */
+    background-position: center;      /* Resmi ortalar */
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Başlık */
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  /* Girdi grupları */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Buton stili */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #27ae60;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #219150;
+  }
+  
+  /* Alt bilgi */
+  .form-container p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .form-container a {
+    color: #27ae60;
+    text-decoration: none;
+  }
+  

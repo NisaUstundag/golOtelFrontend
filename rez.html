@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervasyon</title>
+    <link rel="stylesheet" href="styles/rez.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" >
+
+    <a href="default.html" class="button">Ana Sayfa ➔</a>
+</head>
+<body>
+    <h2>Rezervasyon Formu</h2>
+    <form action="rezervasyon.php" method="POST">
+        <label for="name">Adınız-Soyadınız :</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="phone">Telefon Numaranız:</label>
+        <input type="text" name="phone" id="phone" required>
+
+        <label for="card_info">Kart Bilgisi:</label>
+        <input type="text" name="card_info" id="card_info" required>
+
+    <label for="service">Hizmet Seçiniz:</label>
+    <select name="service" id="service" required>
+      <option value="Malatya Otel">Malatya Otel</option>
+      <option value="Muğla Otel">Muğla Otel</option>
+      <option value="İzmir Otel">İzmir Otel</option>
+      <option value="Ankara Otel">Ankara Otel</option>
+      <option value="Kırıkkale Otel">Kırıkkale Otel</option>
+      <option value="Tatvan Otel">Tatvan Otel</option>
+      <option value="Kadirli Otel">Kadirli Otel</option>
+      <option value="Çelikhan Otel">Çelikhan Otel</option>
+      <option value="Uşak Otel">Uşak Otel</option>
+      <option value="Konya Otel">Konya Otel</option>
+      <option value="Kapadokya Turu">Kapadokya Turu</option>
+      <option value="Van Turu">Van Turu</option>
+      <option value="Mardin Turu">Mardin Turu</option>
+      <option value="Ege ve Akdeniz Turu">Ege ve Akdeniz Turu</option>
+    </select>
+
+        <button type="submit">Rezervasyon Yap</button>
+    </form>
+
+
+</body>
+</html>

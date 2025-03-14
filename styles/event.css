@@ -1,0 +1,98 @@
+/* Genel Stiller */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #7d5c2e;
+    margin: 0;
+    padding: 0;
+}
+
+/* Başlık */
+.etkinlikler h1 {
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+/* Etkinlikler Konteyneri */
+.etkinlikler-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Etkinlik Kutusu */
+.etkinlik-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.etkinlik-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Etkinlik Bilgileri */
+.etkinlik-info {
+    padding: 15px;
+}
+
+.etkinlik-info h3 {
+    color: black;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.etkinlik-info p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Hover Efekti */
+.etkinlik-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #0b443b;
+    color: white;
+    padding: 10px 0;
+    margin-top: 30px;
+}

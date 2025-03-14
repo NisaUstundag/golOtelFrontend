@@ -1,0 +1,723 @@
+
+:root {
+  --main-calor: #7d5c2e;
+  --black-calor: #000000;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/*! Base HTML Codes */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: white;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: black;
+}
+
+body {
+  background-color: var(--main-calor);
+  height: 200vh;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+section {
+  padding: 3.5rem 7%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 2rem 3.75rem;
+  border-radius: 30rem;
+  font-size: 1.7rem;
+  color: aliceblue;
+  background-color: #000000;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+.heading {
+  color: white;
+  text-transform: uppercase;
+  align-items: center;
+  font-size: 4rem;
+  border-bottom: 0.1rem solid white;
+}
+.heading span {
+  text-transform: uppercase;
+  color: black;
+}
+
+/* Search Input */
+.search-input {
+  font-size: 1.6rem;
+  color: var(--black-calor);
+  padding: 1rem;
+  text-transform: none;
+  border-radius: 3rem;
+}
+
+/*! Header Start */
+
+.header .logo img {
+  height: 7rem;
+  margin-top: 1rem;
+}
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  margin: 2rem 7%;
+  border-radius: 30rem;
+  box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/*! Header End */
+
+/*! Home Start */
+.home {
+  min-height: 100vh;
+  background: url(../images/2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -14.5rem;
+  display: flex;
+  align-items: center;
+}
+.home .content {
+  max-width: 60rem;
+
+}
+.home .content h3 {
+  font-size: 6rem;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+.home .content p {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+.home {
+ 
+  min-height: 100vh;
+  background: url("../images/2.jpg") no-repeat center/cover;
+  display: flex;
+
+}
+
+
+/*! Menu Start */
+.menu {
+  padding: 2rem;
+}
+
+.menu .heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Kutu alanı: grid düzeni */
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu .box-container .box {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.menu .box-container .box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+
+.menu .box-container .box .ot-catagory {
+  font-size: 1.6rem;
+  text-transform: uppercase; 
+  color: #666;
+  margin: 1rem 0;
+}
+
+
+.menu .box-container .box h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+
+.menu .box-container .box .price {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+
+
+.menu .box-container .box .btn:hover {
+  background-color: #555;
+}
+/*! Menu End */
+
+/* Genel Navbar Stili */
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: var(--black-color); 
+  border-bottom: 0.1rem solid transparent;
+  text-decoration: none;
+}
+
+.header .navbar .active,
+.header .navbar a:hover {
+  border-color: var(--main-color); 
+  padding-bottom: 0.5rem;
+}
+
+/* Hamburger Buton */
+#menu-btn {
+  display: none; 
+  cursor: pointer;
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+  color: black;
+  align-items: center;
+  top: 1.5rem;
+  right: 2rem;
+}
+
+/* Mobil Menü */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block; 
+  }
+  
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    height: calc(100vh - 9rem);
+    width: 30rem;
+    box-shadow: 0px 20px 14px 0px rgba(0, 0, 0, 0.75);
+    right: -100%;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    visibility: hidden; 
+    opacity: 0;
+  }
+
+  /* Menü Açıldığında */
+  .header .navbar.active {
+    right: 3rem;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header .navbar a {
+    color: var(--black-color);
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    display: block;
+  }
+}
+
+
+/*! Product Start */
+.products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.products .box {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.products .box img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.products .box .box-header {
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.products .box .box-header .name {
+  display: block;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.products .box .box-buttom {
+  width: 100%;
+  text-align: left;
+  padding-top: 1rem;
+}
+.box-buttom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.bilgi {
+  display: flex;
+  flex-direction: column;
+}
+.detay {
+  margin-bottom: 5px;
+}
+.-btn {
+  margin-left: auto;
+}
+.-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #026b4d;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.-btn a i {
+  font-size: 20px;
+}
+/*! Product End */
+
+/*! About Start */
+.about .row .image img {
+  width: 500px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  border-radius: 15px;
+}
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.about .row .content {
+  flex: 1 1 50rem;
+  font-size: 1.9rem;
+  line-height: 1.6;
+  padding: 20px;
+  color: white;
+}
+.about .row .content h3 {
+  color: #db88d6;
+  font-size: 2rem;
+}
+/*! About End */
+
+/*! Review Start */
+.review .reviews-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.review .reviews-wrapper .box {
+  border: var(--border);
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 3rem;
+}
+.review .reviews-wrapper .box img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 1rem;
+}
+.review .reviews-wrapper .box .stars i {
+  font-size: 1.5rem;
+  color: gold;
+}
+ /* Slider Kontrolleri Kapsayıcısı */
+.slider-controls {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  gap: 10px; 
+  margin: 2rem 0; 
+  margin-right: 20px;
+}
+
+/* Slider Butonları */
+.slider-controls button {
+  background-color: #b7b0a8;
+  color: white;
+  border: none;
+  border-radius: 50%; 
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Efekti */
+.slider-controls button:hover {
+  background-color: #501916; 
+  transform: scale(1.1); 
+}
+/* review end/*
+
+/*! Contact Start */
+.contact .row {
+  display: flex;
+  background-color: black;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+.contact .row form {
+  flex: 1 1 50%;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact .row form h3 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: white;
+}
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  border: var(--border);
+}
+.contact .row .map {
+  flex: 1 1 50%;
+  height: 500px;
+}
+.contact .row form .inputBox i {
+  color: white;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+.contact .row form .inputBox input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: white;
+  background-color: transparent;
+}
+.contact .row form .btn {
+  color: var(--main-calor);
+  background-color: white;
+  font-weight: bold;
+}
+/*! Contact End */
+
+/*! Blog Start */
+.blog .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.blog .box-container .box {
+  background-color: white;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.blog .box-container .box .image {
+  height: 20rem;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .box-container .box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.blog .box-container .box:hover .image img {
+  transform: scale(1.1);
+}
+.blog .box-container .box .content {
+  padding: 2rem;
+  text-align: center;
+}
+.blog .box-container .box .content span {
+  display: flex;
+  padding-top: 1rem;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.blog .box-container .box .content .title {
+  color: #026b4d;
+  text-decoration: none;
+  font-weight: bold;
+}
+.blog .box-container .box .content .title:hover {
+  color: #cc4400;
+}
+/*! Blog End */
+
+/*! Footer Start */
+.footer {
+  background-color: var(--black-calor);
+  text-align: center;
+}
+.footer .search {
+  display: flex;
+  justify-content: center;
+}
+.footer .search .search-input {
+  width: 30rem;
+}
+.footer .search .btn-primary {
+  background-color: var(--main-calor);
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+}
+.footer .share {
+  padding: 2rem 0;
+}
+.footer .share a {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0.3rem;
+}
+.footer .share a:hover {
+  background-color: var(--main-calor);
+}
+.footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer .links a {
+  background-color: var(--main-calor);
+  padding: 0.7rem 2rem;
+  color: white;
+  font-size: 2rem;
+}
+.footer .links a:hover {
+  background-color: var(--black-calor);
+  opacity: 0.7;
+}
+.footer .links a.active {
+  background-color: var(--black-calor);
+}
+.footer .credit {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 300;
+  padding-top: 1.5rem;
+}
+.footer .credit span {
+  font-size: 2rem;
+  color: var(--main-calor);
+  font-weight: 300;
+  padding-top: 1.5rem;
+}
+/*! Footer End */
+
+/*! Responsive Start */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .logo img {
+    height: 7rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  
+  .products .box-container .box .box-head .name {
+    font-size: 3.4rem;
+  }
+}
+
+
+
+/*! Responsive End */
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+.hover-info {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+/* Vurgulanan metinlerin stili */
+.highlight {
+  background-color: yellow;
+  display: inline;    
+  padding: 0;        
+  margin: 0;          
+  font-size: inherit; 
+  line-height: inherit;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+
+@media (max-width: 600px) {
+  .highlight {
+    background-color: #ffeb3b;  
+    padding: 0 0.1em;          
+    font-size: inherit;         
+    line-height: inherit;
+  }
+}
+
+.add-review {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 10px;
+  height: 90px;
+  font-size: 16px;
+  background-color: #b5b2b1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.add-review:hover {
+  background-color: #3e1806;
+}
+
+/* Modal ana kapsayıcı */
+.modal {
+  display: none; /* Başlangıçta gizli */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal içeriği */
+.modal-content {
+  background-color: #500c0c;
+  margin: 10% auto;
+  font-size: large;
+  padding: 20px;
+  border: 1px solid #000000;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Kapat butonu */
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+/* Form grupları */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,121 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #7d5c2e;
+  margin: 0;
+  text-align: center;
+  padding-top: 80px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s ease;
+}
+.header {
+  position: fixed;
+  top: 0;
+  justify-content: center;  /* Yatayda ortala */
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: black;
+
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+    width: 95%;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  /* Menü butonu göster */
+  #menu-btn {
+    display: block;
+  }
+
+  /* Navbar gizlenmiş halde başlasın */
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 0 0 15px 15px;
+  }
+
+  /* Menü açıldığında göster */
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.kampanyalar {
+  margin-top: 40px;
+}
+
+.kampanya-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 40%;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.kampanya-box img {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
